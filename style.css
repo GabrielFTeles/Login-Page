@@ -1,0 +1,270 @@
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito Sans', sans-serif;}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+
+  font-size: 1.6rem;
+}
+
+main {
+  height: 100%;
+
+  display: flex;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 4.9rem;
+
+  color: #525252;
+}
+
+button {
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+
+  color: hsla(324, 54%, 32%, 1);
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+a:hover {
+  color: rgb(248, 55, 168);
+}
+
+
+/*==== SIDE IMAGE ==========================*/
+
+.background-image {
+  width: 60%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+
+/*==== LOGIN SIDE CONTENT ==========================*/
+
+.content {
+  width: 40%;
+
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(52.5rem, 100%);
+
+  padding-inline: 2rem;
+
+  margin-inline: auto;
+}
+
+#logo {
+  margin-bottom: 3.6rem;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.text p {
+  line-height: 2.2rem;
+
+  color: #525252;
+}
+
+#google-login {
+  width: 100%;
+
+  cursor: pointer;
+
+  padding-block: 0.5rem;
+
+  background-color: transparent;
+
+  border: 1px solid #E8E8E8;
+  border-radius: 0.5rem;
+
+  color: #828282;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+.separator {
+  width: 25.5rem;
+
+  padding-block: 1.1rem;
+
+  margin-inline: auto;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  user-select: none;
+}
+
+.separator hr {
+  border: none;
+
+  width: 100%;
+
+  border-top: 1px dashed #DDDDDD;
+}
+
+.separator span {
+  color: #c4c4c4;
+  background-color: white;
+
+  position: absolute;
+  top: 0; left: 20%;
+
+  padding-inline: 0.6rem;
+}
+
+.input-box {
+  position: relative;
+}
+
+.input-box + .input-box {
+  margin-top: 2.4rem;
+}
+
+.input-box input {
+  width: 100%;
+  height: 4.5rem;
+
+  padding: 1.5rem;
+
+  border: 1px solid hsla(324, 15%, 85%, 1);
+  border-radius: 0.5rem;
+
+  outline: none;
+}
+
+.input-box span {
+  position: absolute;
+  left: 1.5rem; top: 27%;
+
+  pointer-events: none;
+
+  color: #b9b9b9;
+
+  transition: 0.4s transform;
+}
+
+.input-box input:valid ~ span,
+.input-box input:focus ~ span {
+  transform: translateY(-2rem) translateX(1rem);
+
+  font-size: 1.4rem;
+
+  background-color: white;
+
+  padding-inline: 0.5rem;
+}
+
+.input-box input:focus ~ span {
+  color: #525252;
+}
+
+.input-box input:valid ~ span {
+  color: rgb(3, 204, 3);
+}
+
+.input-box input:focus {
+  border: 1px solid #525252;
+}
+
+.input-box input:valid {
+  border: 1px solid rgb(3, 204, 3);
+}
+
+.user-options {
+  margin-top: 0.8rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#login-button {
+  height: 5rem;
+
+  background-color: hsla(324, 54%, 32%, 1);
+  
+  border-radius: 6px;
+
+  font-size: 1.8rem;
+  color: white;
+  
+  transition: 0.2s;
+}
+
+#login-button:hover {
+  background-color: rgb(116, 35, 82);
+}
+
+.create-account {
+  text-align: center;
+
+  margin-top: 1rem;
+}
+
+
+
+/*==== RESPONSIVE =====================*/
+
+@media (max-width: 1024px) {
+  body {
+    height: auto;
+  }
+
+  .background-image {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+
+    display: block;
+
+    padding-top: 4rem;
+  }
+
+  .create-account {
+    margin-top: 3.2rem;
+  }
+}
